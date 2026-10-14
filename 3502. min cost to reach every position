@@ -1,0 +1,15 @@
+ar minCosts = function(cost) {
+    let result = [];
+    let x = cost[0];
+    result.push(cost[0]);
+    for (let i = 1; i < cost.length; i++) {
+        if (cost[i] <= x) {
+            result.push(cost[i]);
+            x = cost[i];
+        }
+        else if (cost[i] > x) {
+            result.push(x);
+        }
+    }
+    return result;
+};
